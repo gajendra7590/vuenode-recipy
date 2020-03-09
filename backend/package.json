@@ -1,0 +1,25 @@
+{
+    "name": "backend",
+    "version": "1.0.0",
+    "description": "Recipe node backend",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon index.js"
+    },
+    "author": "Gajendra",
+    "license": "ISC",
+    "dependencies": {
+        "bcrypt": "^4.0.1",
+        "body-parser": "^1.19.0",
+        "dateformat": "^3.0.3",
+        "express": "^4.17.1",
+        "express-bearer-token": "^2.4.0",
+        "express-jwt": "^5.3.1",
+        "jsonwebtoken": "^8.5.1",
+        "mysql": "^2.18.1",
+        "parse-bearer-token": "^1.0.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}
