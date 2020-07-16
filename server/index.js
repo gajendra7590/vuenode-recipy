@@ -1,19 +1,22 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 //All Router imports
-var auth = require('./api/auth');
-var category = require('./api/category');
+var auth = require('./api/admin/auth');
+var category = require('./api/admin/category');
 
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/api', auth);
-app.use('/api/categories', category);
+//Admin Routes
+app.use('/api/admin', auth);
+app.use('/api/admin/categories', category);
 
+
+//Frontend Routes
 app.get('/', function(req, res) {
     res.send("Home Page");
 });

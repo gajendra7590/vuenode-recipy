@@ -1,7 +1,7 @@
 var express = require('express')
 const categoryRotuer = express.Router();
-const db = require('../database/connection');
-const middleware = require('../api/middleware');
+const db = require('../../database/connection');
+const middleware = require('./../middleware');
 
 var dateFormat = require('dateformat');
 var now = new Date();
